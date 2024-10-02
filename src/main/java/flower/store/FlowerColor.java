@@ -4,15 +4,15 @@ public enum FlowerColor {
     /**
      * Flower colors.
      */
-    RED("#FF0000"), BLUE("#0000FF");
-    private final String stringRepresentation;
+    RED("#FF0000"), BLUE("#0000FF"), GREEN("#00FF00"), YELLOW("#00FFFF"), WHITE("#FFFFFF");
+    private final String rgb;
 
-    FlowerColor(String stringRepresentation) {
-        this.stringRepresentation = stringRepresentation;
+    FlowerColor(String rgb) {
+        this.rgb = rgb;
     }
 
     @Override
     public String toString() {
-        return stringRepresentation;
+        return rgb;
     }
 }
