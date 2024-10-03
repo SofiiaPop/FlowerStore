@@ -1,11 +1,9 @@
 package flower.store;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class MoreFlowerTest {
 
     private static final Random RANDOM_GENERATOR = new Random();
@@ -20,10 +18,10 @@ public class MoreFlowerTest {
 
         Flower flower = new Flower(expSepalLength, color, expPrice, type);
 
-        assertEquals(expSepalLength, flower.getSepalLength());
-        assertEquals(expPrice, flower.getPrice());
-        assertEquals(color.toString(), flower.getColor());
-        assertEquals(type, flower.getFlowerType());
+        Assertions.assertEquals(expSepalLength, flower.getSepalLength());
+        Assertions.assertEquals(expPrice, flower.getPrice());
+        Assertions.assertEquals(color.toString(), flower.getColor());
+        Assertions.assertEquals(type, flower.getFlowerType());
     }
 
     @Test
@@ -37,10 +35,10 @@ public class MoreFlowerTest {
         Flower original = new Flower(expSepalLength, color, expPrice, type);
         Flower copy = new Flower(original);
 
-        assertEquals(original.getSepalLength(), copy.getSepalLength());
-        assertEquals(original.getPrice(), copy.getPrice());
-        assertEquals(original.getColor(), copy.getColor());
-        assertEquals(original.getFlowerType(), copy.getFlowerType());
+        Assertions.assertEquals(original.getSepalLength(), copy.getSepalLength());
+        Assertions.assertEquals(original.getPrice(), copy.getPrice());
+        Assertions.assertEquals(original.getColor(), copy.getColor());
+        Assertions.assertEquals(original.getFlowerType(), copy.getFlowerType());
     }
 
     @Test
@@ -52,6 +50,6 @@ public class MoreFlowerTest {
 
         Flower flower = new Flower(expSepalLength, color, expPrice, FlowerType.CHAMOMILE);
 
-        assertEquals(color.toString(), flower.getColor());
+        Assertions.assertEquals(color.toString(), flower.getColor());
     }
 }

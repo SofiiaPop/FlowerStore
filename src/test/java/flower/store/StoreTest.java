@@ -1,12 +1,11 @@
 package flower.store;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StoreTest {
 
@@ -27,24 +26,24 @@ public class StoreTest {
     @Test
     void testSearchByRedColor() {
         List<Flower> result = store.search("#FF0000");
-        assertEquals(2, result.size());
+        Assertions.assertEquals(2, result.size());
     }
 
     @Test
     void testSearchByBlueColor() {
         List<Flower> result = store.search("#0000FF");
-        assertEquals(1, result.size());
+        Assertions.assertEquals(1, result.size());
     }
 
     @Test
     void testSearchByNonExistentColor() {
         List<Flower> result = store.search("#00FF00");
-        assertEquals(0, result.size());
+        Assertions.assertEquals(0, result.size());
     }
 
     @Test
     void testSearchCaseInsensitive() {
         List<Flower> result = store.search("#00FFFF");
-        assertEquals(1, result.size());
+        Assertions.assertEquals(1, result.size());
     }
 }

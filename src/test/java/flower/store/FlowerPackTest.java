@@ -2,9 +2,10 @@ package flower.store;
 
 import org.junit.jupiter.api.Test;
 
+import org.junit.jupiter.api.Assertions;
+
 import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FlowerPackTest {
 
@@ -21,9 +22,9 @@ public class FlowerPackTest {
         Flower flower = new Flower(expSepalLength, color, expPrice, type);
         FlowerPack flowerPack = new FlowerPack(flower, count);
 
-        assertEquals(count, flowerPack.getCount());
-        assertEquals(expSepalLength, flowerPack.getFlower().getSepalLength());
-        assertEquals(expPrice, flowerPack.getFlower().getPrice());
+        Assertions.assertEquals(count, flowerPack.getCount());
+        Assertions.assertEquals(expSepalLength, flowerPack.getFlower().getSepalLength());
+        Assertions.assertEquals(expPrice, flowerPack.getFlower().getPrice());
     }
 
     @Test
@@ -38,6 +39,6 @@ public class FlowerPackTest {
         FlowerPack flowerPack = new FlowerPack(flower, count);
 
         double expectedPrice = expPrice * count;
-        assertEquals(expectedPrice, flowerPack.getPrice());
+        Assertions.assertEquals(expectedPrice, flowerPack.getPrice());
     }
 }

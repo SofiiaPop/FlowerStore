@@ -1,11 +1,9 @@
 package flower.store;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class MoreFlowerBucketTest {
 
     private static final Random RANDOM_GENERATOR = new Random();
@@ -23,7 +21,7 @@ public class MoreFlowerBucketTest {
         flowerBucket.add(flowerPack);
 
         double expectedPrice = expPrice * quantity;
-        assertEquals(expectedPrice, flowerBucket.getPrice());
+        Assertions.assertEquals(expectedPrice, flowerBucket.getPrice());
     }
 
     @Test
@@ -43,6 +41,6 @@ public class MoreFlowerBucketTest {
             totalExpectedPrice += expPrice * quantity;
         }
 
-        assertEquals(totalExpectedPrice, flowerBucket.getPrice());
+        Assertions.assertEquals(totalExpectedPrice, flowerBucket.getPrice());
     }
 }
