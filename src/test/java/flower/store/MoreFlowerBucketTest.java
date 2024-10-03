@@ -12,11 +12,14 @@ public class MoreFlowerBucketTest {
     void testAddFlowerPack() {
         FlowerColor color = FlowerColor.RED;
         FlowerType type = FlowerType.ROSE;
-        double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
-        double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
+        double expSepalLength = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(10);
+        double expPrice = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(50);
         int quantity = RANDOM_GENERATOR.nextInt(10) + 1;
 
-        FlowerPack flowerPack = new FlowerPack(new Flower(expSepalLength, color, expPrice, type), quantity);
+        FlowerPack flowerPack = new FlowerPack(new Flower(expSepalLength, color,
+        expPrice, type),quantity);
         FlowerBucket flowerBucket = new FlowerBucket();
         flowerBucket.add(flowerPack);
 
@@ -30,7 +33,8 @@ public class MoreFlowerBucketTest {
         double totalExpectedPrice = 0;
 
         for (int i = 0; i < 5; i++) {
-            FlowerColor color = FlowerColor.values()[RANDOM_GENERATOR.nextInt(FlowerColor.values().length)];
+            FlowerColor color = FlowerColor.values()
+            [RANDOM_GENERATOR.nextInt(FlowerColor.values().length)];
             FlowerType type = FlowerType.values()[RANDOM_GENERATOR.nextInt(FlowerType.values().length)];
             double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
             double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
