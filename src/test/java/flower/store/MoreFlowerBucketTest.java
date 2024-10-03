@@ -1,0 +1,48 @@
+package flower.store;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.Random;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class MoreFlowerBucketTest {
+
+    private static final Random RANDOM_GENERATOR = new Random();
+
+    @Test
+    void testAddFlowerPack() {
+        FlowerColor color = FlowerColor.RED;
+        FlowerType type = FlowerType.ROSE;
+        double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
+        double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
+        int quantity = RANDOM_GENERATOR.nextInt(10) + 1;
+
+        FlowerPack flowerPack = new FlowerPack(new Flower(expSepalLength, color, expPrice, type), quantity);
+        FlowerBucket flowerBucket = new FlowerBucket();
+        flowerBucket.add(flowerPack);
+
+        double expectedPrice = expPrice * quantity;
+        assertEquals(expectedPrice, flowerBucket.getPrice());
+    }
+
+    @Test
+    void testGetPrice() {
+        FlowerBucket flowerBucket = new FlowerBucket();
+        double totalExpectedPrice = 0;
+
+        for (int i = 0; i < 5; i++) {
+            FlowerColor color = FlowerColor.values()[RANDOM_GENERATOR.nextInt(FlowerColor.values().length)];
+            FlowerType type = FlowerType.values()[RANDOM_GENERATOR.nextInt(FlowerType.values().length)];
+            double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
+            double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
+            int quantity = RANDOM_GENERATOR.nextInt(10) + 1;
+
+            FlowerPack flowerPack = new FlowerPack(new Flower(expSepalLength, color, expPrice, type), quantity);
+            flowerBucket.add(flowerPack);
+            totalExpectedPrice += expPrice * quantity;
+        }
+
+        assertEquals(totalExpectedPrice, flowerBucket.getPrice());
+    }
+}

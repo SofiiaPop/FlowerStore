@@ -17,7 +17,7 @@ public class Flower {
     @Getter
     private FlowerType flowerType;
 
-    public Flower(Flower flower){
+    public Flower(Flower flower) {
         flowerType = flower.flowerType;
         sepalLength = flower.sepalLength;
         color = flower.color;
