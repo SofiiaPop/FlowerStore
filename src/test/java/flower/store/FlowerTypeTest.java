@@ -8,7 +8,8 @@ public class FlowerTypeTest {
 
     @Test
     void testChamomile() {
-        Assertions.assertEquals(FlowerType.CHAMOMILE, FlowerType.valueOf("CHAMOMILE"));
+        Assertions.assertEquals(FlowerType.CHAMOMILE,
+        FlowerType.valueOf("CHAMOMILE"));
     }
 
     @Test

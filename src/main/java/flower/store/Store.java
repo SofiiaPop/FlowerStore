@@ -2,8 +2,12 @@ package flower.store;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Getter;
+import lombok.Setter;
+
 class Store {
-    List<Flower> inventory;
+    @Getter @Setter
+    private List<Flower> inventory;
 
     public Store() {
         this.inventory = new ArrayList<>();

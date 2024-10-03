@@ -10,20 +10,26 @@ import java.util.Random;
 public class FlowerPackTest {
 
     private static final Random RANDOM_GENERATOR = new Random();
+    private int ten = 10;
+    private int fifty = 50;
+    private int one = 1;
 
     @Test
     void testFlowerPackCreation() {
         FlowerColor color = FlowerColor.RED;
         FlowerType type = FlowerType.ROSE;
-        double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
-        double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
-        int count = RANDOM_GENERATOR.nextInt(10) + 1;
+        double expSepalLength = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(ten);
+        double expPrice = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(fifty);
+        int count = RANDOM_GENERATOR.nextInt(ten) + one;
 
         Flower flower = new Flower(expSepalLength, color, expPrice, type);
         FlowerPack flowerPack = new FlowerPack(flower, count);
 
         Assertions.assertEquals(count, flowerPack.getCount());
-        Assertions.assertEquals(expSepalLength, flowerPack.getFlower().getSepalLength());
+        Assertions.assertEquals(expSepalLength,
+        flowerPack.getFlower().getSepalLength());
         Assertions.assertEquals(expPrice, flowerPack.getFlower().getPrice());
     }
 
@@ -31,9 +37,11 @@ public class FlowerPackTest {
     void testGetPrice() {
         FlowerColor color = FlowerColor.BLUE;
         FlowerType type = FlowerType.TULIP;
-        double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
-        double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
-        int count = RANDOM_GENERATOR.nextInt(10) + 1;
+        double expSepalLength = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(ten);
+        double expPrice = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(fifty);
+        int count = RANDOM_GENERATOR.nextInt(ten) + one;
 
         Flower flower = new Flower(expSepalLength, color, expPrice, type);
         FlowerPack flowerPack = new FlowerPack(flower, count);

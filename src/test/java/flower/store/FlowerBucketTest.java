@@ -14,7 +14,7 @@ public class FlowerBucketTest {
     private FlowerBucket flowerBucket;
 
     @BeforeEach
-    public void SetUp() {
+    public void setUp() {
         flowerBucket = new FlowerBucket();
     }
 

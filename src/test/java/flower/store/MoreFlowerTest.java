@@ -7,12 +7,14 @@ import java.util.Random;
 public class MoreFlowerTest {
 
     private static final Random RANDOM_GENERATOR = new Random();
+    private int ten = 10;
+    private int fifty = 50;
 
     @Test
     void testConstructorFirst() {
         double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
         double expPrice = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(50);
+        * RANDOM_GENERATOR.nextInt(fifty);
 
         FlowerColor color = FlowerColor.RED;
         FlowerType type = FlowerType.ROSE;
@@ -28,9 +30,9 @@ public class MoreFlowerTest {
     @Test
     void testCopyConstructorSecond() {
         double expSepalLength = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(10);
+        * RANDOM_GENERATOR.nextInt(ten);
         double expPrice = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(50);
+        * RANDOM_GENERATOR.nextInt(fifty);
 
         FlowerColor color = FlowerColor.BLUE;
         FlowerType type = FlowerType.TULIP;
@@ -48,9 +50,9 @@ public class MoreFlowerTest {
     @Test
     void testGetColor() {
         double expSepalLength = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(10);
+        * RANDOM_GENERATOR.nextInt(ten);
         double expPrice = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(50);
+        * RANDOM_GENERATOR.nextInt(fifty);
 
         FlowerColor color = FlowerColor.YELLOW;
 
