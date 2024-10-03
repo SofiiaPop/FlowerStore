@@ -9,9 +9,10 @@ public class MoreFlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
 
     @Test
-    void testConstructor1() {
+    void testConstructorFirst() {
         double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
-        double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
+        double expPrice = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(50);
 
         FlowerColor color = FlowerColor.RED;
         FlowerType type = FlowerType.ROSE;
@@ -25,9 +26,11 @@ public class MoreFlowerTest {
     }
 
     @Test
-    void testCopyConstructor2() {
-        double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
-        double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
+    void testCopyConstructorSecond() {
+        double expSepalLength = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(10);
+        double expPrice = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(50);
 
         FlowerColor color = FlowerColor.BLUE;
         FlowerType type = FlowerType.TULIP;
@@ -35,7 +38,8 @@ public class MoreFlowerTest {
         Flower original = new Flower(expSepalLength, color, expPrice, type);
         Flower copy = new Flower(original);
 
-        Assertions.assertEquals(original.getSepalLength(), copy.getSepalLength());
+        Assertions.assertEquals(original.getSepalLength(),
+        copy.getSepalLength());
         Assertions.assertEquals(original.getPrice(), copy.getPrice());
         Assertions.assertEquals(original.getColor(), copy.getColor());
         Assertions.assertEquals(original.getFlowerType(), copy.getFlowerType());
@@ -43,12 +47,15 @@ public class MoreFlowerTest {
 
     @Test
     void testGetColor() {
-        double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
-        double expPrice = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(50);
+        double expSepalLength = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(10);
+        double expPrice = RANDOM_GENERATOR.nextDouble()
+        * RANDOM_GENERATOR.nextInt(50);
 
         FlowerColor color = FlowerColor.YELLOW;
 
-        Flower flower = new Flower(expSepalLength, color, expPrice, FlowerType.CHAMOMILE);
+        Flower flower = new Flower(expSepalLength, 
+        color, expPrice, FlowerType.CHAMOMILE);
 
         Assertions.assertEquals(color.toString(), flower.getColor());
     }
