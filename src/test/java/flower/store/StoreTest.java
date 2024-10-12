@@ -12,14 +12,20 @@ public class StoreTest {
     private Store store;
     private double five = 5.0;
     private double ten = 10.0;
+    private double six = 6.0;
+    private double fift = 15.0;
+    private double four = 4.0;
+    private double sev = 7.0;
+    private double twelve = 12.0;
+    private double twenty = 20.0;
 
     @BeforeEach
     void setUp() {
         List<Flower> inventory = Arrays.asList(
-            new Flower( five, FlowerColor.RED, ten, FlowerType.ROSE),
-            new Flower(6.0, FlowerColor.BLUE, 15.0, FlowerType.TULIP),
-            new Flower(4.0, FlowerColor.YELLOW, 12.0, FlowerType.CHAMOMILE),
-            new Flower(7.0, FlowerColor.RED, 20.0, FlowerType.ROSE)
+            new Flower(five, FlowerColor.RED, ten, FlowerType.ROSE),
+            new Flower(six, FlowerColor.BLUE, fift, FlowerType.TULIP),
+            new Flower(four, FlowerColor.YELLOW, twelve, FlowerType.CHAMOMILE),
+            new Flower(sev, FlowerColor.RED, twenty, FlowerType.ROSE)
         );
         store = new Store();
         store.setInventory(inventory);
