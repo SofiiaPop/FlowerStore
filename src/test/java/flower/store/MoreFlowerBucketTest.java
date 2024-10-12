@@ -8,9 +8,9 @@ public class MoreFlowerBucketTest {
 
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int TEN = 10;
-    private static final int FIFTY = FIVE0;
+    private static final int FIFTY = 50;
     private static final int ONE = 1;
-    private static final int FIVE = FIVE;
+    private static final int FIVE = 5;
 
     @Test
     void testAddFlowerPack() {
