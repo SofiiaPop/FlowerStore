@@ -7,8 +7,8 @@ import java.util.Random;
 public class MoreFlowerTest {
 
     private static final Random RANDOM_GENERATOR = new Random();
-    private int ten = 10;
-    private int fifty = 50;
+    private static final int ten = 10;
+    private static final int fifty = 50;
 
     @Test
     void testConstructorFirst() {

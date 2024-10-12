@@ -10,14 +10,14 @@ import java.util.List;
 public class StoreTest {
 
     private Store store;
-    private double five = 5.0;
-    private double ten = 10.0;
-    private double six = 6.0;
-    private double fift = 15.0;
-    private double four = 4.0;
-    private double sev = 7.0;
-    private double twelve = 12.0;
-    private double twenty = 20.0;
+    private static final double five = 5.0;
+    private static final double ten = 10.0;
+    private static final double six = 6.0;
+    private static final double fift = 15.0;
+    private static final double four = 4.0;
+    private static final double sev = 7.0;
+    private static final double twelve = 12.0;
+    private static final double twenty = 20.0;
 
     @BeforeEach
     void setUp() {

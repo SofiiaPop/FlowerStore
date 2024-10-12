@@ -7,9 +7,9 @@ import java.util.Random;
 public class MoreFlowerBucketTest {
 
     private static final Random RANDOM_GENERATOR = new Random();
-    private int ten = 10;
-    private int fifty = 50;
-    private int one = 1;
+    private static final int ten = 10;
+    private static final int fifty = 50;
+    private static final int one = 1;
 
     @Test
     void testAddFlowerPack() {
