@@ -12,7 +12,7 @@ public class MoreFlowerTest {
 
     @Test
     void testConstructorFirst() {
-        double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(10);
+        double expSepalLength = RANDOM_GENERATOR.nextDouble() * RANDOM_GENERATOR.nextInt(ten);
         double expPrice = RANDOM_GENERATOR.nextDouble()
         * RANDOM_GENERATOR.nextInt(fifty);
 
