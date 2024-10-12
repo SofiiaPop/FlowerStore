@@ -9,23 +9,23 @@ import java.util.List;
 
 public class StoreTest {
 
+    private static final double FIVE = 5.0;
+    private static final double TEN = 10.0;
+    private static final double SIX = 6.0;
+    private static final double FIFT = 15.0;
+    private static final double FOUR = 4.0;
+    private static final double SEV = 7.0;
+    private static final double TWELVE = 12.0;
+    private static final double TWENTY = 20.0;
     private Store store;
-    private static final double five = 5.0;
-    private static final double ten = 10.0;
-    private static final double six = 6.0;
-    private static final double fift = 15.0;
-    private static final double four = 4.0;
-    private static final double sev = 7.0;
-    private static final double twelve = 12.0;
-    private static final double twenty = 20.0;
 
     @BeforeEach
     void setUp() {
         List<Flower> inventory = Arrays.asList(
-            new Flower(five, FlowerColor.RED, ten, FlowerType.ROSE),
-            new Flower(six, FlowerColor.BLUE, fift, FlowerType.TULIP),
-            new Flower(four, FlowerColor.YELLOW, twelve, FlowerType.CHAMOMILE),
-            new Flower(sev, FlowerColor.RED, twenty, FlowerType.ROSE)
+            new Flower(FIVE, FlowerColor.RED, TEN, FlowerType.ROSE),
+            new Flower(SIX, FlowerColor.BLUE, FIFT, FlowerType.TULIP),
+            new Flower(FOUR, FlowerColor.YELLOW, TWELVE, FlowerType.CHAMOMILE),
+            new Flower(SEV, FlowerColor.RED, TWENTY, FlowerType.ROSE)
         );
         store = new Store();
         store.setInventory(inventory);
@@ -44,7 +44,7 @@ public class StoreTest {
     }
 
     @Test
-    void testSearchByNonExistentColor() {
+    void testSearchByNonExisTENtColor() {
         List<Flower> result = store.search("#00FF00");
         Assertions.assertEquals(0, result.size());
     }

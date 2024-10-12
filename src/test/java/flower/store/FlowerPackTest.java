@@ -10,19 +10,19 @@ import java.util.Random;
 public class FlowerPackTest {
 
     private static final Random RANDOM_GENERATOR = new Random();
-    private static final int ten = 10;
-    private static final int fifty = 50;
-    private static final int one = 1;
+    private static final int TEN = 10;
+    private static final int FIFTY = 50;
+    private static final int ONE = 1;
 
     @Test
     void testFlowerPackCreation() {
         FlowerColor color = FlowerColor.RED;
         FlowerType type = FlowerType.ROSE;
         double expSepalLength = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(ten);
+        * RANDOM_GENERATOR.nextInt(TEN);
         double expPrice = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(fifty);
-        int count = RANDOM_GENERATOR.nextInt(ten) + one;
+        * RANDOM_GENERATOR.nextInt(FIFTY);
+        int count = RANDOM_GENERATOR.nextInt(TEN) + ONE;
 
         Flower flower = new Flower(expSepalLength, color, expPrice, type);
         FlowerPack flowerPack = new FlowerPack(flower, count);
@@ -38,10 +38,10 @@ public class FlowerPackTest {
         FlowerColor color = FlowerColor.BLUE;
         FlowerType type = FlowerType.TULIP;
         double expSepalLength = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(ten);
+        * RANDOM_GENERATOR.nextInt(TEN);
         double expPrice = RANDOM_GENERATOR.nextDouble()
-        * RANDOM_GENERATOR.nextInt(fifty);
-        int count = RANDOM_GENERATOR.nextInt(ten) + one;
+        * RANDOM_GENERATOR.nextInt(FIFTY);
+        int count = RANDOM_GENERATOR.nextInt(TEN) + ONE;
 
         Flower flower = new Flower(expSepalLength, color, expPrice, type);
         FlowerPack flowerPack = new FlowerPack(flower, count);
